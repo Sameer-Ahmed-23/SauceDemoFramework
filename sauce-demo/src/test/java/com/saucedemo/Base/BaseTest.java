@@ -14,11 +14,14 @@ import org.openqa.selenium.edge.EdgeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.testng.annotations.BeforeTest;
 
+import com.saucedemo.PageObjects.HomePage;
+
 public class BaseTest {
 
 	protected WebDriver driver;
 	String url, browser;
 	protected String userName, passWord;
+	public HomePage h;
 	
 	@BeforeTest
 	public void setUp() throws Exception

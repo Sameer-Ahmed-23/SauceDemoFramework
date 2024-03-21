@@ -1,25 +1,45 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="0" total="2" passed="2" failed="0" skipped="0">
+<testng-results ignored="0" total="5" passed="5" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2024-03-21T23:05:13 IST" name="Default suite" finished-at="2024-03-21T23:05:26 IST" duration-ms="13236">
+  <suite started-at="2024-03-22T05:24:06 IST" name="Suite" finished-at="2024-03-22T05:24:40 IST" duration-ms="34147">
     <groups>
     </groups>
-    <test started-at="2024-03-21T23:05:13 IST" name="Default test" finished-at="2024-03-21T23:05:26 IST" duration-ms="13236">
-      <class name="com.saucedemo.Tests.AddToCartTest">
-        <test-method is-config="true" signature="setUp()[pri:0, instance:com.saucedemo.Tests.AddToCartTest@209da20d]" started-at="2024-03-21T23:05:13 IST" name="setUp" finished-at="2024-03-21T23:05:24 IST" duration-ms="11850" status="PASS">
+    <test started-at="2024-03-22T05:24:06 IST" name="RemoveFromCart" finished-at="2024-03-22T05:24:18 IST" duration-ms="12151">
+      <class name="com.saucedemo.Tests.RemoveFromCartTest">
+        <test-method is-config="true" signature="setUp()[pri:0, instance:com.saucedemo.Tests.RemoveFromCartTest@1b2abca6]" started-at="2024-03-22T05:24:06 IST" name="setUp" finished-at="2024-03-22T05:24:17 IST" duration-ms="10940" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUp -->
-        <test-method signature="Login()[pri:0, instance:com.saucedemo.Tests.AddToCartTest@209da20d]" started-at="2024-03-21T23:05:24 IST" name="Login" finished-at="2024-03-21T23:05:25 IST" duration-ms="778" status="PASS">
+        <test-method signature="Login()[pri:0, instance:com.saucedemo.Tests.RemoveFromCartTest@1b2abca6]" started-at="2024-03-22T05:24:17 IST" name="Login" finished-at="2024-03-22T05:24:18 IST" duration-ms="480" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- Login -->
-        <test-method signature="AddToCart()[pri:0, instance:com.saucedemo.Tests.AddToCartTest@209da20d]" started-at="2024-03-21T23:05:25 IST" name="AddToCart" finished-at="2024-03-21T23:05:26 IST" depends-on-methods="com.saucedemo.Tests.AddToCartTest.Login" duration-ms="514" status="PASS">
+        <test-method signature="AddToCart()[pri:0, instance:com.saucedemo.Tests.RemoveFromCartTest@1b2abca6]" started-at="2024-03-22T05:24:18 IST" name="AddToCart" finished-at="2024-03-22T05:24:18 IST" depends-on-methods="com.saucedemo.Tests.AddToCartTest.Login" duration-ms="189" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- AddToCart -->
+        <test-method signature="RemoveFromCart()[pri:0, instance:com.saucedemo.Tests.RemoveFromCartTest@1b2abca6]" started-at="2024-03-22T05:24:18 IST" name="RemoveFromCart" finished-at="2024-03-22T05:24:18 IST" depends-on-methods="com.saucedemo.Tests.AddToCartTest.AddToCart" duration-ms="482" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- RemoveFromCart -->
+      </class> <!-- com.saucedemo.Tests.RemoveFromCartTest -->
+    </test> <!-- RemoveFromCart -->
+    <test started-at="2024-03-22T05:24:18 IST" name="AddToCart" finished-at="2024-03-22T05:24:40 IST" duration-ms="21936">
+      <class name="com.saucedemo.Tests.AddToCartTest">
+        <test-method is-config="true" signature="setUp()[pri:0, instance:com.saucedemo.Tests.AddToCartTest@73e9cf30]" started-at="2024-03-22T05:24:18 IST" name="setUp" finished-at="2024-03-22T05:24:40 IST" duration-ms="21331" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method signature="Login()[pri:0, instance:com.saucedemo.Tests.AddToCartTest@73e9cf30]" started-at="2024-03-22T05:24:40 IST" name="Login" finished-at="2024-03-22T05:24:40 IST" duration-ms="425" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- Login -->
+        <test-method signature="AddToCart()[pri:0, instance:com.saucedemo.Tests.AddToCartTest@73e9cf30]" started-at="2024-03-22T05:24:40 IST" name="AddToCart" finished-at="2024-03-22T05:24:40 IST" depends-on-methods="com.saucedemo.Tests.AddToCartTest.Login" duration-ms="175" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- AddToCart -->
       </class> <!-- com.saucedemo.Tests.AddToCartTest -->
-    </test> <!-- Default test -->
-  </suite> <!-- Default suite -->
+    </test> <!-- AddToCart -->
+  </suite> <!-- Suite -->
 </testng-results>

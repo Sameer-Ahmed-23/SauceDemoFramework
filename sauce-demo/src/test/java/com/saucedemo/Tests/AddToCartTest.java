@@ -9,8 +9,8 @@ import com.saucedemo.PageObjects.LandingPage;
 
 public class AddToCartTest extends BaseTest {
 	
-	HomePage h;
-	@Test(priority=0)
+	
+	@Test
 	public void Login()
 	{
 		LandingPage la= new LandingPage(driver);

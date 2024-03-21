@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="Suite">
+  <test thread-count="5" name="RemoveFromCart">
+    <classes>
+      <class name="com.saucedemo.Tests.RemoveFromCartTest"/>
+    </classes>
+  </test>
+  <test name="AddToCart">
+  <classes>
+  <class name="com.saucedemo.Tests.AddToCartTest"></class>
+  </classes>
+  </test>
+<!-- Test -->
+</suite> <!-- Suite -->
