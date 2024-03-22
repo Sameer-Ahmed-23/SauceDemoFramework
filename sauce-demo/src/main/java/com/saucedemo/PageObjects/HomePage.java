@@ -1,6 +1,12 @@
 package com.saucedemo.PageObjects;
 
+import java.io.IOException;
+import java.net.HttpURLConnection;
+import java.net.MalformedURLException;
+import java.net.URL;
 import java.util.List;
+import java.util.ListIterator;
+
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.JavascriptExecutor;
@@ -9,6 +15,7 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
+import org.testng.Assert;
 
 import com.saucedemo.Abstract.Abstract;
 
@@ -21,6 +28,9 @@ public class HomePage extends Abstract {
 	
 	@FindBy(css=".inventory_item")
 	List<WebElement> li;
+	
+	@FindBy(css=".footer")
+	WebElement footer;
 	
 	
 	public void AddToCart(String item)
@@ -43,6 +53,36 @@ public class HomePage extends Abstract {
 		driver2.findElement(By .tagName("button")).click();
 		}
 		
+		
+	}
+	
+	public void checkBrokenLink() throws MalformedURLException, IOException
+	{
+		List<WebElement> footerlinks= footer.findElements(By .tagName("a"));
+		
+		ListIterator<WebElement> a=footerlinks.listIterator();
+		
+		while(a.hasNext())
+		{
+			WebElement link= a.next();
+			String url= link.getAttribute("href");
+			System.out.println(url);
+			if(url!=null && !url.isEmpty())
+			{
+				HttpURLConnection con= (HttpURLConnection) new URL(url).openConnection();
+				con.setRequestMethod("HEAD");
+				int response= con.getResponseCode();
+				System.out.print(response);
+				if(response>399)
+				{
+					Assert.assertFalse(true);
+					continue;
+				}
+				
+				
+			}
+			
+		}
 		
 	}
 	

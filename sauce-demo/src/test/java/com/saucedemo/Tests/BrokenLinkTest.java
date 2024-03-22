@@ -1,14 +1,15 @@
 package com.saucedemo.Tests;
 
-import org.openqa.selenium.WebDriver;
+import java.io.IOException;
+import java.net.MalformedURLException;
+import java.net.http.HttpResponse;
+
 import org.testng.annotations.Test;
 
 import com.saucedemo.Base.BaseTest;
-import com.saucedemo.PageObjects.HomePage;
 import com.saucedemo.PageObjects.LandingPage;
 
-public class AddToCartTest extends BaseTest {
-	
+public class BrokenLinkTest extends BaseTest {
 	
 	@Test
 	public void Login()
@@ -18,9 +19,9 @@ public class AddToCartTest extends BaseTest {
 	}
 	
 	@Test(dependsOnMethods= {"Login"})
-	public void AddToCart()
+	public void BrokenLink() throws Exception, IOException
 	{
-		h.AddToCart("Sauce Labs Bolt T-Shirt");
+		h.checkBrokenLink();
 	}
 	
 	

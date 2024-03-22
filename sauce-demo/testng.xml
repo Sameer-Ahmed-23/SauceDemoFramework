@@ -11,5 +11,10 @@
   <class name="com.saucedemo.Tests.AddToCartTest"></class>
   </classes>
   </test>
+  <test name="BrokenLink">
+  <classes>
+  <class name="com.saucedemo.Tests.BrokenLinkTest"></class>
+  </classes>
+  </test>
 <!-- Test -->
 </suite> <!-- Suite -->
