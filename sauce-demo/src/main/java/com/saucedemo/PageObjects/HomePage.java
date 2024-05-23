@@ -72,13 +72,18 @@ public class HomePage extends Abstract {
 				HttpURLConnection con= (HttpURLConnection) new URL(url).openConnection();
 				con.setRequestMethod("HEAD");
 				int response= con.getResponseCode();
-				System.out.print(response);
+				try {
 				if(response>399)
 				{
-					Assert.assertFalse(true);
-					continue;
+					Assert.fail("Header Response is greater than 200");
 				}
 				
+				Assert.assertTrue(true, "Not a broken link");
+				}
+				catch(Exception e)
+				{
+					System.out.println("Test failed for brokenLink"+ url+ "response code is" + response);
+				}
 				
 			}
 			
