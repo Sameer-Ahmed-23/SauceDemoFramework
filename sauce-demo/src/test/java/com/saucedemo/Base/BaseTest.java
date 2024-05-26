@@ -24,7 +24,7 @@ import com.saucedemo.PageObjects.HomePage;
 
 public class BaseTest {
 
-	protected WebDriver driver;
+	public WebDriver driver;
 	String url, browser;
 	protected String userName, passWord;
 	public HomePage h;
