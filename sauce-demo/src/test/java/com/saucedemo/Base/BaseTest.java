@@ -3,17 +3,23 @@ package com.saucedemo.Base;
 import java.io.File;
 import java.io.FileInputStream;
 import java.io.FileReader;
+import java.io.IOException;
 import java.time.Duration;
 
+import org.apache.commons.io.FileUtils;
 import org.json.simple.JSONObject;
 import org.json.simple.parser.JSONParser;
 import org.json.simple.parser.ParseException;
+import org.openqa.selenium.OutputType;
+import org.openqa.selenium.TakesScreenshot;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.edge.EdgeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.testng.annotations.BeforeTest;
 
+import com.aventstack.extentreports.ExtentReports;
+import com.aventstack.extentreports.reporter.ExtentSparkReporter;
 import com.saucedemo.PageObjects.HomePage;
 
 public class BaseTest {
@@ -60,4 +66,23 @@ public class BaseTest {
 		
 		
 	}
+	
+public ExtentReports ReporterObject()
+		{
+			ExtentSparkReporter Reporter= new ExtentSparkReporter(new File(System.getProperty("user.dir")+"/Reports/Report.html"));
+			ExtentReports extent = new ExtentReports();
+			extent.attachReporter(Reporter);
+			return extent;
+			
+		}
+
+public String getStringShots(String path, WebDriver driver) throws IOException
+{
+	TakesScreenshot screenshot =(TakesScreenshot) driver;
+	File srcFile= screenshot.getScreenshotAs(OutputType.FILE);
+	File destFile= new File(System.getProperty("user.dir")+"/reports/screenshot.png");
+	FileUtils.copyFile(srcFile, destFile);
+	return System.getProperty("user.dir")+"/reports/screenshot.png";
+	
+}
 }
