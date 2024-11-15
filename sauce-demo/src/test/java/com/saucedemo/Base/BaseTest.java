@@ -76,7 +76,7 @@ public ExtentReports ReporterObject()
 			
 		}
 
-public String getStringShots(String path, WebDriver driver) throws IOException
+public String getScreenShots(String path, WebDriver driver) throws IOException
 {
 	TakesScreenshot screenshot =(TakesScreenshot) driver;
 	File srcFile= screenshot.getScreenshotAs(OutputType.FILE);
