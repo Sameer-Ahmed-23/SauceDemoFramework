@@ -45,7 +45,7 @@ public class ReportListener extends BaseTest implements ITestListener {
 		if (driver!=null)
 		{
 			try {
-				path= getStringShots(result.getName(), driver);
+				path= getScreenShots(result.getName(), driver);
 				driver.quit();
 			} catch (IOException e) {
 				// TODO Auto-generated catch block
